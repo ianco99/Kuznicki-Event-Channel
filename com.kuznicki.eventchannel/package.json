@@ -1,0 +1,7 @@
+{
+  "name": "com.kuznicki.eventchannel",
+  "version": "1.1.1",
+  "displayName": "Kuznicki's Events Channel System",
+  "description": "This is Kuznicki's implementation of an Event Channel System using unity's Scriptable Objects. This implementation is greatly based on (github name)jvarelaaloisio's implementation.'",
+  "unity": "2021.3"
+}
