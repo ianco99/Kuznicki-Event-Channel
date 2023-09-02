@@ -29,5 +29,26 @@ namespace kuznickiEventChannel
                 myAction?.Invoke(data);
         }
     }
+
+    public abstract class EventChannelSO : ScriptableObject
+    {
+        private Action myAction;
+
+        public void Subscribe(in Action handler)
+        {
+            myAction += handler;
+        }
+
+        public void Unsubscribe(in Action handler)
+        {
+            myAction -= handler;
+        }
+
+        public void RaiseEvent()
+        {
+            if (myAction.GetInvocationList().Length > 0)
+                myAction?.Invoke();
+        }
+    }
 }
 
