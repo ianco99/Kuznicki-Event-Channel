@@ -25,7 +25,7 @@ namespace kuznickiEventChannel
 
         public void RaiseEvent(T data)
         {
-            if (myAction.GetInvocationList().Length > 0)
+            if (myAction?.GetInvocationList().Length > 0)
                 myAction?.Invoke(data);
         }
     }
@@ -46,7 +46,7 @@ namespace kuznickiEventChannel
 
         public void RaiseEvent()
         {
-            if (myAction.GetInvocationList().Length > 0)
+            if (myAction?.GetInvocationList().Length > 0)
                 myAction?.Invoke();
         }
     }
